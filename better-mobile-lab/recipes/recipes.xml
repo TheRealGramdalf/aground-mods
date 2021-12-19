@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <recipe id="recipe_id" creates="item_id" type="enchantments">
+      <item id="item_id_1" count="1" />
+      <item id="item_id_2" count="1" />
+      <item id="item_id_3" count="2" />
+      <item id="item_id_4" count="2" />
+  </recipe>
+</data>

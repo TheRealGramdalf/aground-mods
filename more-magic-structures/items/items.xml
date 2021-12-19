@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <item id="lair_seed" type="potion" cost="1000" weight="10" icon="magic_seed.ico" animation="fire_seed.ico"><action id="plant" sfx="plant_seed" structure="dragon_lair2" onGrass="false" underground="false" buildTime="10"><plantCost><item id="gold_bar" count="1" /></plantCost></action></item>
+  <item id="golem_factory_seed" type="potion" cost="10000" weight="10" icon="magic_seed.ico" animation="evo_seed.ico"><action id="plant" sfx="plant_seed" structure="golem_factory" onGrass="false" underground="true" buildTime="10"><plantCost><item id="focus_gem" count="1" /></plantCost></action></item>
+  <item id="drag_factory_seed" type="potion" cost="50000" weight="10" icon="magic_seed.ico" animation="fire_seed.ico"><action id="plant" sfx="plant_seed" structure="drag_factory" onGrass="false" underground="false" buildTime="25"><plantCost><item id="evo_gem" count="1" /></plantCost></action></item>
+  <item id="megolemech_factory_seed" type="potion" cost="100000" weight="50" icon="magic_seed.ico" animation="evo_seed.ico"><action id="plant" sfx="plant_seed" structure="megolemech_factory" onGrass="false" underground="true" buildTime="50"><plantCost><item id="evo_gem" count="1" /></plantCost></action></item>
+</data>

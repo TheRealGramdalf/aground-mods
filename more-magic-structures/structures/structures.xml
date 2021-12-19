@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <structure id="dragon_lair2" extends="dragon_lair2" removeButton="structure.uproot">
+        <removeBy><action>this.onDismantle(player); player.addItem("lair_seed");</action></removeBy>
+  </structure>
+  <structure id="golem_factory" extends="golem_factory" removeButton="structure.uproot">
+        <removeBy><action>this.onDismantle(player); player.addItem("golem_factory_seed");</action></removeBy>
+  </structure>
+  <structure id="drag_factory" extends="drag_factory" removeButton="structure.uproot">
+        <removeBy><action>this.onDismantle(player); player.addItem("drag_factory_seed");</action></removeBy>
+  </structure>
+  <structure id="megolemech_factory" extends="megolemech_factory" removeButton="structure.uproot">
+        <removeBy><action>this.onDismantle(player); player.addItem("megolemech_factory_seed");</action></removeBy>
+  </structure>
+</data>

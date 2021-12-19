@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <recipe id="craft_lair_seed" creates="lair_seed" type="enchantments">
+    <item id="fire_gem" count="1" />
+    <item id="alter_gem" count="1" />
+    <item id="diamond" count="2" />
+    <item id="dragonblood" count="1" />
+  </recipe>
+  <recipe id="craft_golem_factory_seed" creates="golem_factory_seed" type="enchantments">
+      <item id="earth_gem" count="1" />
+      <item id="alter_gem" count="1" />
+      <item id="diamond" count="2" />
+      <item id="blood_gem" count="2" />
+  </recipe>
+</data>

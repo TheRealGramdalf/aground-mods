@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mod>
+  <name>More Magic Structures!</name>
+  <description>Allows planting of many more magic structures</description>
+  <author>Goboosh</author>
+  <version>1.0.0</version><requires>Full Version</requires>
+  <init>
+    <include id="items/items.xml"/>
+    <include id="structures/structures.xml"/>
+    <include id="recipes/recipes.xml"/>
+    <include id="lang.xml"/>
+  </init>
+</mod>

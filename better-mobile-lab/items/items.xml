@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <item id="item_id" type="potion" cost="1000" weight="10" icon="magic_seed.ico" animation="fire_seed.ico"><action id="plant" sfx="plant_seed" structure="dragon_lair2" onGrass="false" underground="false" buildTime="10"><plantCost><item id="gold_bar" count="1" /></plantCost></action></item>
+</data>

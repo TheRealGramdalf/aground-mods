@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <lang id="en_US">
+    <section id="item.names">
+      <text id="lair_seed">Lair Seed</text>
+      <text id="golem_factory_seed">Golem Factory Seed</text>
+      <text id="drag_factory_seed">Dragon Factory Seed</text>
+      <text id="megolemech_factory_seed">Megolemech Factory Seed</text>
+    </section>
+    <section id="item.descriptions">
+      <text id="lair_seed">Plants a Dragon Lair</text>
+      <text id="golem_factory_seed">Plants a Golem Factory</text>
+      <text id="drag_factory_seed">Plants a Dragon Factory</text>
+      <text id="megolemech_factory_seed">Plants a Megolemech Factory</text>
+    </section>
+  </lang>
+</data>
