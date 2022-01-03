@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <data>
   <lang id="en_US">
     <section id="item.names">
-      <text id="item_id">Item Name Here</text>
+      <text id="random_item">Item Name Here</text>
     </section>
     <section id="item.descriptions">
-      <text id="lair_seed">Enter Description Here</text>
+      <text id="random_item">Enter Description Here</text>
     </section>
   </lang>
 </data>

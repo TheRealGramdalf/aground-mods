@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-  <recipe id="recipe_id" creates="item_id" type="enchantments">
-      <item id="item_id_1" count="1" />
-      <item id="item_id_2" count="1" />
-      <item id="item_id_3" count="2" />
-      <item id="item_id_4" count="2" />
+	<recipe id="betterlab" object="research" title="world.research" fuel_cost="200" type="station.dock" >
+		<item id="titanium" count="70" />
+    <item id="moissanite" count="20" />
+		<item id="silicon" count="20" />
+		<item id="uranium" count="15" />
+    <item id="magnegem" count="15" />
+    <item id="exotic_matter" count="10" />
+    <item id="ship_parts" count="10" />
+    <item id="exotic_gas" count="5" />
+	</recipe>
   </recipe>
 </data>

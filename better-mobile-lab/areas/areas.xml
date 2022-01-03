@@ -5,6 +5,7 @@
 		<tiles id="blackstone" y="0" /><tiles id="blackstone" y="31" /><tiles id="blackstone" x="64" /><tiles id="blackstone" x="127" />
 		<structure id="tesseract" x="86" y="5" /><structure id="bunker_depot" x="95" y="5" />
 		<structure id="lab" x="82" y="5" /><structure id="wyrm_pen" x="79" y="5" /><structure id="bunker" x="100" y="5" />
+		<object id="power_core" x="90" y="5" />
 		<action>
 			for(y in 0...2) for(x in 0...8) area.addObject(ObjectInfo.make("light_orb2", (x*8+68)*Tile.SIZE, (y*16+6)*Tile.SIZE));
 			for(y in 0...32) for(x in 64...128) area.setLit(x, y);
