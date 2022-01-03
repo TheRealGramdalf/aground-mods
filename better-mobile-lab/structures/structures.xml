@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-  <structure id="new_structure_id" extends="old_structure_id" removeButton="structure.uproot">
-        <removeBy><action>this.onDismantle(player); player.addItem("lair_seed");</action></removeBy>
-  </structure>
+	<structure id="tesseract" image="teleportal.png" name="tesseract">
+			<operate><teleport area="area.id=='start'?'tesseract.portal':'start'" x="player._getTileX()" y="player._getTileY()" with="ellipse_fast" /></operate>
+			<over><play object="this" animation="start" /><action>this.loopAnimation("active")</action></over>
+			<out><play object="this" animation="stop" /><action>this.loopAnimation("idle")</action></out>
+	<structure/>
 </data>

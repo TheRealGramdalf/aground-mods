@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<vehicle id="research" extends="research" tile="research" health="5000" fuel="2000" useBatteries="false" efficiency="0" fuelName="power" defense="12" fps="12" speed="9" type="spaceship" blood="science.explosion.lg" title="itemName('world.research', this.name)" underground="true" underwater="true" flight_height="999" max_weight="30000" death_sfx="explosion" mine="8" mine_fuel="1" mine_speed="1" showMine="true" block_icon="fighter.shields.ico" block_behind="true" block_move="true" icon="research_lab.ico" flyMove="false" swimAnim="true" hitDamage="5" backAboveTiles="true" enter_sea_sfx="research_dive" exit_sea_sfx="research_surface" allowRename="true">
+		<tile id="research" animation="hidden" x="0" y="0" fps="12" />
+		<interior area="research.interior" offsetX="3" offsetY="0" enterX="8" enterY="5" exitX="0" operateX="9.5" operateY="1" />
+		<repair id="titanium" value="400" /><operateHitbox x="124" y="48" width="66" height="64" />
+		<dismount><action>if(this.renderer != null) this.renderer.scaleX = 1;</action></dismount>
+		<light tile="light.research" />
+        <init><set id="partial" value="0" /><set id="cores" value="0" /><set id="repair" value="0" /></init>
+		<onFrame>
+			var f = frames*0.25; var of = Math.floor(f); partial += f-of; if(partial >= 1){of++; partial -= 1;}
+			var p = of*cores; if(this.blocking) p -= of*4; if(p > 0) this.addFuel(p); else if(p &lt; 0) this.useFuel(-p);
+			var p = of*repair; if(p > 0) this.addHealth(p);
+		</onFrame>
+		<mount><set id="cores" value="getPowerCores(this.interior)" /><set id="repair" value="(this.interior.getNPC('mechanic')==null)?0:1" /></mount>
+		<exitInterior><run object="research" event="mount" /></exitInterior>
+		<enterInterior>
+			<section if="this.interior != null && player.questComplete('research_lab') && (o = player.areas.get('earth.desert').getNPC('professor')) != null">
+				<remove object="o" /><object id="professor" x="17" y="4" areaObject="this.interior" />
+			</section>
+		</enterInterior>
+		<over><action if="this.renderer != null">var s = this.renderer.inner.getChildAt(0); s.setFrame(0); s.playAnimation("research.door.open", false);</action></over>
+		<out><action if="this.renderer != null">var s = this.renderer.inner.getChildAt(0); s.setFrame(0); s.playAnimation("research.door.close", false);</action></out>
+		<shield tile="research" animation="research.shields" hit_front="research.shields.front" hit_back="research.shields.back" hit_sfx="ship_shield" />
+	</vehicle>
+
+
+	<area id="research.interior" extends="research.interior" name="research" shouldLight="false" backDarkness="1" powered="getPowerCores(this) > 0">
+		<action>
+			for(y in 2...5) for(x in 1...19) setBack(x, y, "ship.grate");
+			for(x in 2...18) setBack(x, 5, "ship.floor"); for(x in 3...17) setBack(x, 1, "ship.floor");
+			for(y in 0...7) for(x in 0...20) if(area.getTileId(x, y, BACK_LAYER) == -1) setTile(x, y, "empty");
+			for(y in 3...5) area.setBlockNPC(3, y); setBack(8, 6, "empty"); setBack(11, 6, "empty"); setTile(8, 6, null); setTile(11, 6, null);
+		</action>
+		<structure id="tesseract" x="3" y="4" />
+		<structure id="research.command" x="8" y="1" />
+		<structure id="research.shields" x="12" y="1" />
+		<structure id="fighter.weaps" x="5" y="1" />
+		<structure id="research.quarters" x="3" y="1" />
+		<structure id="research.quarters" x="15" y="1" />
+		<structure id="fighter.o2" x="8" y="2" />
+		<structure id="fighter.subsystems" x="10" y="2" />
+		<structure id="fighter.cargo" x="2" y="5" /><structure id="fighter.cargo" x="14" y="5" />
+		<structure id="research.engine" x="8" y="4" />
+		<structure id="research.hall" x="6" y="5" />
+		<structure id="research.lab" x="17" y="4" />
+		<structure id="research.kitchen" x="1" y="4" />
+		<structure id="research.arcade1" x="1" y="2" />
+		<structure id="research.arcade2" x="2" y="2" />
+		<structure id="research.factory" x="3" y="3" />
+		<structure id="research.drone_factory" x="14" y="3" />
+		<structure id="research.exit" x="8" y="6" /><structure id="research.exit" x="11" y="6" />
+		
+		<object id="power_core.slot" x="8" y="3" /><object id="power_core.slot" x="8" y="4" /><object id="power_core.slot" x="11" y="4" /><object id="power_core.slot" x="11" y="3" />
+		
+		<object id="ship.doorh" x="7.5" y="1" /><object id="ship.doorh" x="11.5" y="1" />
+		<object id="ship.doorh" x="4.5" y="1" /><object id="ship.doorh" x="14.5" y="1" />
+		<object id="ship.doorv" x="9" y="1.5" /><object id="ship.doorv" x="10" y="1.5" />
+		<object id="ship.doorv" x="9" y="2.5" /><object id="ship.doorv" x="10" y="2.5" />
+		<object id="ship.doorv" x="9" y="4.5" /><object id="ship.doorv" x="10" y="4.5" />
+		<object id="ship.doorh" x="5.5" y="5" /><object id="ship.doorh" x="13.5" y="5" />
+		<object id="ship.doorv" x="5" y="1.5" /><object id="ship.doorv" x="5" y="3.5" />
+		<object id="ship.doorv" x="14" y="1.5" /><object id="ship.doorv" x="14" y="3.5" />
+		<object id="ship.doorv" x="7" y="1.5" /><object id="ship.doorv" x="12" y="1.5" />
+		<object id="ship.doorh" x="2.5" y="4" /><object id="ship.doorh" x="16.5" y="4" />
+		
+		<action>for(y in 0...7) for(x in 0...20) area.setLit(x, y);</action>
+	
+		<init><runAreaLoad /></init>
+		<onLoad>
+			<music id="technically" seconds="1" />
+			<set id="pos" value="[17,4, 15,3, 3,2, 4,2, 13,1, 8,2, 15,5]" />
+			<set id="ids" value="['professor','scavenger','mirrow_n.npc','mirrow_d.npc','mechanic','hunter_lab', 'depths.explorer']" />
+			<set id="id" value="randInt(0, ids.length+3)" />
+			<action>
+				var len = ids.length; found = false; for(i in 0...len){
+					var o = area.getObject(ids[i]); if(o == null) continue; if(i == id){o.setPosition(Tile.SIZE, 3*Tile.SIZE, true); found = true;}
+					else if(o.tile_x &lt; 3) o.setPosition(pos[2*i]*Tile.SIZE, pos[2*i+1]*Tile.SIZE, true);
+				}
+			</action>
+			<set id="s" value="area.getStructureById('fighter.shields')" /><structure id="research.shields" x="s.tile_x" y="s.tile_y" if="s != null" />
+			<tile id="research.kitchen.counter.food" x="1" y="3" top="true" if="found" />
+		</onLoad>
+	</area>
+
+</data>
