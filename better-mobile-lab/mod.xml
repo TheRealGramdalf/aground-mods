@@ -5,11 +5,11 @@
   <author>Goboosh</author>
   <version>1.0.0</version><requires>Full Version</requires>
   <init>
+    <include id="lang.xml"/>
     <include id="items/items.xml"/>
     <include id="structures/structures.xml"/>
-    <include id="recipes/recipes.xml"/>
-    <include id="lang.xml"/>
-    <include id="vehicles/research.xml"/>
     <include id="areas/areas.xml"/>
+    <include id="vehicles/research.xml"/>
+    <include id="recipes/recipes.xml"/>
   </init>
 </mod>

@@ -2,11 +2,8 @@
 
 <data>
   <lang id="en_US">
-    <section id="item.names">
-      <text id="random_item">Item Name Here</text>
-    </section>
-    <section id="item.descriptions">
-      <text id="random_item">Enter Description Here</text>
+    <section id="world">
+      <text id="betterlab">Upgraded Lab</text>
     </section>
   </lang>
 </data>

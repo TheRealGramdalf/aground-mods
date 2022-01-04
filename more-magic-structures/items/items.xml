@@ -5,3 +5,4 @@
   <item id="drag_factory_seed" type="potion" cost="50000" weight="10" icon="magic_seed.ico" animation="fire_seed.ico"><action id="plant" sfx="plant_seed" structure="drag_factory" onGrass="false" underground="false" buildTime="25"><plantCost><item id="evo_gem" count="1" /></plantCost></action></item>
   <item id="megolemech_factory_seed" type="potion" cost="100000" weight="50" icon="magic_seed.ico" animation="evo_seed.ico"><action id="plant" sfx="plant_seed" structure="megolemech_factory" onGrass="false" underground="true" buildTime="50"><plantCost><item id="evo_gem" count="1" /></plantCost></action></item>
 </data>
+ 
