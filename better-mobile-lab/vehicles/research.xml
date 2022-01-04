@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-	<vehicle id="research" extends="research" tile="research" health="5000" fuel="2000" useBatteries="false" efficiency="0" fuelName="power" defense="12" fps="12" speed="9" type="spaceship" blood="science.explosion.lg" title="itemName('world.research', this.name)" underground="true" underwater="true" flight_height="999" max_weight="30000" death_sfx="explosion" mine="8" mine_fuel="1" mine_speed="1" showMine="true" block_icon="fighter.shields.ico" block_behind="true" block_move="true" icon="research_lab.ico" flyMove="false" swimAnim="true" hitDamage="5" backAboveTiles="true" enter_sea_sfx="research_dive" exit_sea_sfx="research_surface" allowRename="true">
+	<vehicle id="betterlab" tile="research" health="5000" fuel="2000" useBatteries="false" efficiency="0" fuelName="power" defense="12" fps="12" speed="9" type="spaceship" blood="science.explosion.lg" title="itemName('world.research', this.name)" underground="true" underwater="true" flight_height="999" max_weight="30000" death_sfx="explosion" mine="8" mine_fuel="1" mine_speed="1" showMine="true" block_icon="fighter.shields.ico" block_behind="true" block_move="true" icon="research_lab.ico" flyMove="false" swimAnim="true" hitDamage="5" backAboveTiles="true" enter_sea_sfx="research_dive" exit_sea_sfx="research_surface" allowRename="true">
 		<tile id="research" animation="hidden" x="0" y="0" fps="12" />
 		<interior area="research.interior" offsetX="3" offsetY="0" enterX="8" enterY="5" exitX="0" operateX="9.5" operateY="1" />
 		<repair id="titanium" value="400" /><operateHitbox x="124" y="48" width="66" height="64" />
@@ -12,6 +12,7 @@
 			var p = of*cores; if(this.blocking) p -= of*4; if(p > 0) this.addFuel(p); else if(p &lt; 0) this.useFuel(-p);
 			var p = of*repair; if(p > 0) this.addHealth(p);
 		</onFrame>
+        <onDeath><run procedure="launch.lifepod" /></onDeath>
 		<mount><set id="cores" value="getPowerCores(this.interior)" /><set id="repair" value="(this.interior.getNPC('mechanic')==null)?0:1" /></mount>
 		<exitInterior><run object="research" event="mount" /></exitInterior>
 		<enterInterior>
@@ -25,7 +26,7 @@
 	</vehicle>
 
 
-	<area id="research.interior" extends="research.interior" name="research" shouldLight="false" backDarkness="1" powered="getPowerCores(this) > 0">
+	<area id="betterlab.interior" name="research" shouldLight="false" backDarkness="1" powered="getPowerCores(this) > 0">
 		<action>
 			for(y in 2...5) for(x in 1...19) setBack(x, y, "ship.grate");
 			for(x in 2...18) setBack(x, 5, "ship.floor"); for(x in 3...17) setBack(x, 1, "ship.floor");

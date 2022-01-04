@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-	<structure id="tesseract" image="teleportal.png" name="tesseract">
-			<operate><teleport area="area.id=='start'?'tesseract.portal':'start'" x="player._getTileX()" y="player._getTileY()" with="ellipse_fast" /></operate>
-			<over><play object="this" animation="start" /><action>this.loopAnimation("active")</action></over>
-			<out><play object="this" animation="stop" /><action>this.loopAnimation("idle")</action></out>
-	<structure/>
+    <animation id="tesseract.start" count="5" />
+    <animation id="tesseract.stop" count="5" reverse="true" />
+    <animation id="tesseract.active" x="5" count="9" />
+    <structure id="tesseract" width="32" height="16" image="tesseract.png" powered="true" name="operate" includeName="true" repairType="mechanic">
+        <operate>
+			<teleport area = "tesseract.portal" x = "86" y = "5" />
+        </operate>
+        <over><play object="this" animation="start" /><action>this.loopAnimation("active")</action></over>
+        <out><play object="this" animation="stop" /><action>this.loopAnimation("idle")</action></out>
+    </structure>
 </data>
