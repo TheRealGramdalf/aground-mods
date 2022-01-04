@@ -7,11 +7,11 @@
       <text id="drag_factory_seed">Dragon Factory Seed</text>
       <text id="megolemech_factory_seed">Megolemech Factory Seed</text>
     </section>
-    <section id="item.descriptions">
-      <text id="lair_seed">Plants a Dragon Lair</text>
-      <text id="golem_factory_seed">Plants a Golem Factory</text>
-      <text id="drag_factory_seed">Plants a Dragon Factory</text>
-      <text id="megolemech_factory_seed">Plants a Megolemech Factory</text>
+    <section id="structure">
+      <text id="dragon_lair2">Dragon Lair</text>
+      <text id="golem_factory">Golem Factory</text>
+      <text id="drag_factory">Dragon Factory</text>
+      <text id="megolemech_factory">Megolemech Factory</text>
     </section>
   </lang>
 </data>

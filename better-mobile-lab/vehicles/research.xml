@@ -2,7 +2,7 @@
 <data>
 	<vehicle id="betterlab" tile="research" health="5000" fuel="2000" useBatteries="false" efficiency="0" fuelName="power" defense="12" fps="12" speed="9" type="spaceship" blood="science.explosion.lg" title="itemName('world.research', this.name)" underground="true" underwater="true" flight_height="999" max_weight="30000" death_sfx="explosion" mine="8" mine_fuel="1" mine_speed="1" showMine="true" block_icon="fighter.shields.ico" block_behind="true" block_move="true" icon="research_lab.ico" flyMove="false" swimAnim="true" hitDamage="5" backAboveTiles="true" enter_sea_sfx="research_dive" exit_sea_sfx="research_surface" allowRename="true">
 		<tile id="research" animation="hidden" x="0" y="0" fps="12" />
-		<interior area="research.interior" offsetX="3" offsetY="0" enterX="8" enterY="5" exitX="0" operateX="9.5" operateY="1" />
+		<interior area="betterlab.interior" offsetX="3" offsetY="0" enterX="8" enterY="5" exitX="0" operateX="9.5" operateY="1" />
 		<repair id="titanium" value="400" /><operateHitbox x="124" y="48" width="66" height="64" />
 		<dismount><action>if(this.renderer != null) this.renderer.scaleX = 1;</action></dismount>
 		<light tile="light.research" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-	<recipe id="betterlab" object="research" title="world.research" fuel_cost="200" type="station.dock" >
+	<recipe id="betterlab_dock" object="betterlab" title="" fuel_cost="200" type="station.dock" >
 		<item id="titanium" count="70" />
     <item id="moissanite" count="20" />
 		<item id="silicon" count="20" />
@@ -10,5 +10,4 @@
     <item id="ship_parts" count="10" />
     <item id="exotic_gas" count="5" />
 	</recipe>
-  </recipe>
 </data>
