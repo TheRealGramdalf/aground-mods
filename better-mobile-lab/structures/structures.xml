@@ -5,7 +5,17 @@
     <animation id="tesseract.active" x="5" count="9" />
     <structure id="tesseract" width="32" height="16" image="tesseract.png" powered="true" name="operate" includeName="true" repairType="mechanic">
         <operate>
-			<teleport area = "tesseract.portal" x = "86" y = "5" />
+			<teleport area = "tesseract.portal" x = "88" y = "5" with="ellipse" />
+        </operate>
+        <over><play object="this" animation="start" /><action>this.loopAnimation("active")</action></over>
+        <out><play object="this" animation="stop" /><action>this.loopAnimation("idle")</action></out>
+    </structure>
+    <structure id="tesseract_back" width="32" height="16" image="tesseract.png" powered="true" name="operate" includeName="true" repairType="mechanic">
+        <operate>
+            <action with="ellipse" >
+                var o = player.getNPC('betterlab');
+                o.enter(player)
+            </action>
         </operate>
         <over><play object="this" animation="start" /><action>this.loopAnimation("active")</action></over>
         <out><play object="this" animation="stop" /><action>this.loopAnimation("idle")</action></out>
